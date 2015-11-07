@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Here is the infomation of the slides" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLf-Yh-1mq">
+                                <rect key="frame" x="163" y="289" width="274" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zLf-Yh-1mq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6jR-jH-WgR"/>
+                            <constraint firstItem="zLf-Yh-1mq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WDz-Pg-okJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="345"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="NrC-z1-uRN">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="tm2-OU-Hfh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bu8-TD-v9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="345"/>
+        </scene>
+        <!--ContendVC-->
+        <scene sceneID="sh9-g3-xfw">
+            <objects>
+                <viewController storyboardIdentifier="ContendView" id="lVq-fv-tVs" customClass="JBContendVC" customModule="UIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gRd-Sm-Z1W"/>
+                        <viewControllerLayoutGuide type="bottom" id="0JB-gA-g0c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WkB-OT-ket">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9A-2O-ngr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="trailing" secondItem="WkB-OT-ket" secondAttribute="trailingMargin" id="0uq-Ga-bXR"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="bottom" secondItem="0JB-gA-g0c" secondAttribute="top" id="2uF-Vb-tqA"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="top" secondItem="WkB-OT-ket" secondAttribute="top" id="BUK-ud-dw8"/>
+                            <constraint firstAttribute="trailing" secondItem="F9A-2O-ngr" secondAttribute="trailing" id="FFa-ia-iwy"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="leading" secondItem="WkB-OT-ket" secondAttribute="leadingMargin" constant="-20" id="POd-ck-vbo"/>
+                            <constraint firstItem="0JB-gA-g0c" firstAttribute="top" secondItem="F9A-2O-ngr" secondAttribute="bottom" id="YGe-sM-WAk"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="bottom" secondItem="0JB-gA-g0c" secondAttribute="top" id="abb-DM-iJv"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="top" secondItem="WkB-OT-ket" secondAttribute="top" id="bVe-P5-vq0"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="leading" secondItem="WkB-OT-ket" secondAttribute="leadingMargin" id="q25-ef-3ow"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="leading" secondItem="WkB-OT-ket" secondAttribute="leading" id="xtY-bU-KRW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F9A-2O-ngr" secondAttribute="trailing" constant="-20" id="ydt-qi-nQU"/>
+                            <constraint firstItem="F9A-2O-ngr" firstAttribute="top" secondItem="WkB-OT-ket" secondAttribute="topMargin" id="ysV-Ty-bpF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0uq-Ga-bXR"/>
+                                <exclude reference="POd-ck-vbo"/>
+                                <exclude reference="abb-DM-iJv"/>
+                                <exclude reference="bVe-P5-vq0"/>
+                                <exclude reference="q25-ef-3ow"/>
+                                <exclude reference="ydt-qi-nQU"/>
+                                <exclude reference="ysV-Ty-bpF"/>
+                                <exclude reference="YGe-sM-WAk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="F9A-2O-ngr" id="3eO-0j-2gT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEk-E2-arp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="1044"/>
         </scene>
     </scenes>
 </document>
